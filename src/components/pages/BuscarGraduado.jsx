@@ -69,13 +69,18 @@ const BuscarGraduado = () => {
             <button type="submit">Buscar</button>
           </div>
         </form>
+        
         {graduadoEncontrado && (
           <div>
             <h2>Detalles del Graduado</h2>
+            {/* Aquí puedes mostrar toda la información del graduado */}
             <p>Nombre: {graduadoEncontrado.name}</p>
             <p>Apellido: {graduadoEncontrado.lastname}</p>
             <p>Email: {graduadoEncontrado.email}</p>
-            {/* Otros datos del graduado */}
+            <p>Cédula: {graduadoEncontrado.cedula}</p>
+            <p>Carrera: {graduadoEncontrado.carrera}</p>
+            <p>Año de Graduación: {graduadoEncontrado.anoGraduacion}</p>
+            {/* Añade más campos según los datos que tengas */}
           </div>
         )}
       </div>

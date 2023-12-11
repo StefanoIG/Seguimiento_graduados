@@ -69,7 +69,11 @@ const RegistrarGraduado = () => {
     direccion: "",
     telefono: "",
     email: "",
+    carrera: "",
+    anoGraduacion: "",
+    chamba: ""
   });
+
  const handleSubmit = (e) => {
   e.preventDefault();
 
@@ -158,17 +162,18 @@ const RegistrarGraduado = () => {
               <input type="text" id="correo" name="email" value={formData.email} onChange={handleChange} required />
             </div>
             <div className="campo">
-              <label htmlFor="date">Fecha de graduación</label>
-              <input type="date" id="date" name="date" />
+              <label htmlFor="anoGraduacion">Año de Graduación</label>
+              <input type="date" id="anoGraduacion" name="anoGraduacion" value={formData.anoGraduacion} onChange={handleChange} />
             </div>
             <div className="campo">
-              <label htmlFor="carrera">Carrera de egreso</label>
-              <input type="text" id="carrera" name="carrera" />
+              <label htmlFor="carrera">Carrera de Egreso</label>
+              <input type="text" id="carrera" name="carrera" value={formData.carrera} onChange={handleChange} />
             </div>
             <div className="campo">
               <label htmlFor="chamba">¿Está trabajando en algo relacionado a su carrera?</label>
-              <input type="text" id="chamba" name="chamba" />
+              <input type="text" id="chamba" name="chamba" value={formData.chamba} onChange={handleChange} />
             </div>
+
 
             <div className="boton-container">
               <button className="boton" type="submit">Registrar</button>
